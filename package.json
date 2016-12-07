@@ -1,0 +1,29 @@
+{
+  "name": "quick-url",
+  "version": "0.0.1",
+  "description": "A quick url builder",
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "^4.17.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perezperret/quick-url.git"
+  },
+  "keywords": [
+    "url-builder",
+    "url",
+    "url-parser",
+    "querystring"
+  ],
+  "author": "perezperret@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/perezperret/quick-url/issues"
+  },
+  "homepage": "https://github.com/perezperret/quick-url#readme"
+}
