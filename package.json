@@ -6,9 +6,11 @@
   "dependencies": {
     "lodash": "^4.17.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jasmine": "^2.5.2"
+  },
   "scripts": {
-    "test": "npm test"
+    "test": "jasmine JASMINE_CONFIG_PATH=jasmine.json"
   },
   "repository": {
     "type": "git",
