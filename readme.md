@@ -4,7 +4,7 @@ A very simple JavaScript URL builder. It is based on `ng2-router`'s navigation A
 
 ## Usage
 
-Simply pass in a `resource` path in the form of an array and a `params` object, the params will be parsed to a typical url query string, the params can be recursively nested objects as long as they end up un a string or an array of strings:
+Simply pass in a `resource` path in the form of an array and a `params` object, the params will be parsed to a typical url query string, the params can be recursively nested objects as long as they end up in a string or an array of strings:
 
 ```javascript
 
@@ -12,22 +12,56 @@ Simply pass in a `resource` path in the form of an array and a `params` object, 
 
   let resource = ['http://example.com', 'users', 'a-123', 'accounts'];
   let params = {
-    created: {
-      after: '2017-8-6',
-      before: '2019-7-5'
+    filter: {
+      created: {
+        after: '2017-8-6',
+        before: '2019-7-5'
+      }
     },
-    type: ['savings', 'checking'];
+    type: ['savings', 'checking'],
   }
 
   qUrl.buildUrl(resource, params);
-  // http://example.com/users/a-123/accounts?created[after]=2017-8-6&created[before]=2019-7-5&type=savings,checking
+  /**
+   * http://example.com/users/a-123/accounts?
+   *   filter[created][after]=2017-8-6&filter[created][before]=2019-7-5
+   *   &type=savings,checking
+  */
 
 ```
 
-## Ideas for future features
+Conversely, pass in a URL to convert it back into object notation:
 
-- Allow for configuring separators
-- Parse URLs back to path and query objects
+```javascript
+
+  let qUrl = require('quick-url');
+  let url = [
+    'http://example.com/users/a-123/accounts?',
+    'filter[created][after]=2017-8-6&filter[created][before]=2019-7-5',
+    '&type=savings,checking'
+  ].join('');
+
+  let { resourcePath, queryParams } = qUrl.parseUrl(url);
+
+  /*
+    resourcePath = ['http://example.com', 'users', 'a-123', 'accounts'];
+    queryParams = {
+      filter: {
+        created: {
+          after: '2017-8-6',
+          before: '2019-7-5'
+        }
+      },
+      type: ['savings', 'checking'],
+    };
+  */
+
+```
+
+## TODOs
+
+-[ ] Allow for configuring separators
+-[ ] Handle fragments (#params)
 
 ## License
 
