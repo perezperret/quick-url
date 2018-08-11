@@ -22,6 +22,7 @@ Simply pass in a `resource` path in the form of an array and a `params` object, 
   }
 
   qUrl.buildUrl(resource, params);
+
   /**
    * http://example.com/users/a-123/accounts?
    *   filter[created][after]=2017-8-6&filter[created][before]=2019-7-5
