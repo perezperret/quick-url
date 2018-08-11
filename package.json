@@ -2,7 +2,7 @@
   "name": "quick-url",
   "version": "0.0.2",
   "description": "A quick url builder",
-  "main": "index.js",
+  "main": "lib/quick-url.js",
   "dependencies": {
     "lodash": "^4.17.2"
   },
