@@ -1,6 +1,6 @@
 # quick-url
 
-A very simple JavaScript URL builder. It is based on `ng2-router`'s navigation API. The query params can be infinitely nested, although the utility of this is limited, it's a nice recursion exercise.
+A very simple JavaScript URL builder. It is based on `ng2-router`'s navigation API. The query params can be infinitely nested, although the utility of this is limited, it's a nice recursion exercise. You can check out a [live example](https://quick-url-demo.netlify.com/), with [its source](https://github.com/perezperret/quick-url-demo/tree/master).
 
 ## Usage
 
