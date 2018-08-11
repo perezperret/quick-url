@@ -1,6 +1,6 @@
 {
   "name": "quick-url",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A quick url builder",
   "main": "lib/quick-url.js",
   "dependencies": {
