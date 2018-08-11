@@ -58,11 +58,6 @@ Conversely, pass in a URL to convert it back into object notation:
 
 ```
 
-## TODOs
-
-- [ ] Allow for configuring separators
-- [ ] Handle fragments (#params)
-
 ## License
 
 MIT
